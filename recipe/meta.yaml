@@ -1,4 +1,4 @@
-{% set version = "2.3-2" %}
+{% set version = "3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmap/tmap_{{ version }}.tar.gz
-  sha256: ca09cb0c59b167e9f22684367c9ec4e004f982675ba8a9da41eff6dbc7f96407
+  sha256: e3b15a7f18bbcf8ab2ed4e381cf39c385fbfb364e6c93c4e4e6cc360739ba875
 
 build:
   merge_build_host: True  # [win]
@@ -37,6 +37,7 @@ requirements:
     - r-tmaptools >=2.0_2
     - r-units >=0.6_1
     - r-viridislite
+    - r-leafem
   run:
     - r-base
     - r-rcolorbrewer
@@ -51,6 +52,7 @@ requirements:
     - r-tmaptools >=2.0_2
     - r-units >=0.6_1
     - r-viridislite
+    - r-leafem
 
 test:
   commands:
