@@ -1,4 +1,4 @@
-{% set version = "2.3-2" %}
+{% set version = "3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmap/tmap_{{ version }}.tar.gz
-  sha256: ca09cb0c59b167e9f22684367c9ec4e004f982675ba8a9da41eff6dbc7f96407
+  sha256: e3b15a7f18bbcf8ab2ed4e381cf39c385fbfb364e6c93c4e4e6cc360739ba875
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -60,14 +60,12 @@ test:
 about:
   home: https://github.com/mtennekes/tmap
   license: GPL-3
-  summary: Thematic maps are geographical maps in which spatial data distributions are visualized.
-    This package offers a flexible, layer-based, and easy to use approach to create
-    thematic maps, such as choropleths and bubble maps.
+  summary: Thematic maps are geographical maps in which spatial data distributions are visualized. This package offers a flexible, layer-based, and easy to use approach
+    to create thematic maps, such as choropleths and bubble maps.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
-  description: Set of tools for reading and processing spatial data. The aim is to supply the workflow
-    to create thematic maps. This package also facilitates 'tmap', the package for visualizing
-    thematic maps.
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  description: Set of tools for reading and processing spatial data. The aim is to supply the workflow to create thematic maps. This package also facilitates 'tmap',
+    the package for visualizing thematic maps.
   doc_url: https://cran.r-project.org/web/packages/tmap/tmap.pdf
   dev_url: https://github.com/mtennekes/tmap
 
