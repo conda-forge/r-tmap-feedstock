@@ -26,33 +26,35 @@ requirements:
   host:
     - r-base
     - r-rcolorbrewer
-    - r-classint
+    - r-classint >=0.4_3
     - r-htmltools
     - r-htmlwidgets
+    - r-leafem >=0.1
     - r-leaflet >=2.0.2
     - r-leafsync
-    - r-lwgeom >=0.1_4
-    - r-raster >=2.7_15
-    - r-sf >=0.7_1
-    - r-tmaptools >=2.0_2
+    - r-rlang
+    - r-sf >=0.9_3
+    - r-stars >=0.4_2
+    - r-tmaptools >=3.1
     - r-units >=0.6_1
     - r-viridislite
-    - r-leafem
+    - r-widgetframe
   run:
     - r-base
     - r-rcolorbrewer
-    - r-classint
+    - r-classint >=0.4_3
     - r-htmltools
     - r-htmlwidgets
+    - r-leafem >=0.1
     - r-leaflet >=2.0.2
     - r-leafsync
-    - r-lwgeom >=0.1_4
-    - r-raster >=2.7_15
-    - r-sf >=0.7_1
-    - r-tmaptools >=2.0_2
+    - r-rlang
+    - r-sf >=0.9_3
+    - r-stars >=0.4_2
+    - r-tmaptools >=3.1
     - r-units >=0.6_1
     - r-viridislite
-    - r-leafem
+    - r-widgetframe
 
 test:
   commands:
@@ -61,7 +63,7 @@ test:
 
 about:
   home: https://github.com/mtennekes/tmap
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Thematic maps are geographical maps in which spatial data distributions are visualized. This package offers a flexible, layer-based, and easy to use approach to create thematic maps, such as choropleths and bubble maps.
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
