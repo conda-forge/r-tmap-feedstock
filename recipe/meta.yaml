@@ -33,6 +33,7 @@ requirements:
     - r-leafem >=0.1
     - r-leaflet >=2.0.2
     - r-leafsync
+    - r-lwgeom >=0.2_5
     - r-rlang
     - r-sf >=0.9_7
     - r-stars >=0.5_0
@@ -50,6 +51,7 @@ requirements:
     - r-leafem >=0.1
     - r-leaflet >=2.0.2
     - r-leafsync
+    - r-lwgeom >=0.2_5
     - r-rlang
     - r-sf >=0.9_7
     - r-stars >=0.5_0
