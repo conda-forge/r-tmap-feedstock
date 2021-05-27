@@ -42,6 +42,7 @@ Installing `r-tmap` from the `conda-forge` channel can be achieved by adding `co
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-tmap` can be installed with:
@@ -122,6 +123,7 @@ Feedstock Maintainers
 
 * [@agcopenhaver](https://github.com/agcopenhaver/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@mxr-conda](https://github.com/mxr-conda/)
 * [@oblute](https://github.com/oblute/)
 * [@tata17](https://github.com/tata17/)
 
