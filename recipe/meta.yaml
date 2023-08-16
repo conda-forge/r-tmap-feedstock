@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -28,7 +28,7 @@ requirements:
     - r-rcolorbrewer
     - r-abind
     - r-classint >=0.4_3
-    - r-htmltools
+    - r-htmlwidgets >=1.5.4
     - r-htmlwidgets
     - r-leafem >=0.1
     - r-leaflet >=2.0.2
@@ -46,7 +46,7 @@ requirements:
     - r-rcolorbrewer
     - r-abind
     - r-classint >=0.4_3
-    - r-htmltools
+    - r-htmlwidgets >=1.5.4
     - r-htmlwidgets
     - r-leafem >=0.1
     - r-leaflet >=2.0.2
