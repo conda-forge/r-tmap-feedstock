@@ -1,4 +1,4 @@
-{% set version = "3.3-3" %}
+{% set version = "3.3-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmap/tmap_{{ version }}.tar.gz
-  sha256: 60e58eef0f8c723db855d59117ca9f9b5e3663ba34b5ca783dc889bf20285e04
+  sha256: c966bcd61c21a9609144f2de89da1601e734ee2c6903f08bf624b217944faaf7
 
 build:
   merge_build_host: true  # [win]
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
