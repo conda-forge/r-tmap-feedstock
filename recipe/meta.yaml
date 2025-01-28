@@ -1,4 +1,4 @@
-{% set version = "3.3-4" %}
+{% set version = "4.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmap/tmap_{{ version }}.tar.gz
-  sha256: c966bcd61c21a9609144f2de89da1601e734ee2c6903f08bf624b217944faaf7
+  sha256: cf97399627540e9f2faf4778d56c4bd644fdedd09ef541ae3de74a002a6d4bd4
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
