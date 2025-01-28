@@ -21,42 +21,47 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-rcolorbrewer
-    - r-abind
     - r-classint >=0.4_3
-    - r-htmlwidgets >=1.5.4
+    - r-cli
+    - r-cols4all >=0.8
+    - r-data.table
+    - r-htmltools
     - r-htmlwidgets
     - r-leafem >=0.1
+    - r-leafgl
+    - r-leaflegend
     - r-leaflet >=2.0.2
     - r-leafsync
-    - r-lwgeom >=0.2_5
     - r-rlang
-    - r-sf >=0.9_7
-    - r-stars >=0.5_0
+    - r-s2
+    - r-servr
+    - r-sf >=0.9_3
+    - r-stars >=0.4_2
     - r-tmaptools >=3.1
     - r-units >=0.6_1
-    - r-viridislite
-    - r-widgetframe
   run:
     - r-base
-    - r-rcolorbrewer
-    - r-abind
     - r-classint >=0.4_3
-    - r-htmlwidgets >=1.5.4
+    - r-cli
+    - r-cols4all >=0.8
+    - r-data.table
+    - r-htmltools
     - r-htmlwidgets
     - r-leafem >=0.1
+    - r-leafgl
+    - r-leaflegend
     - r-leaflet >=2.0.2
     - r-leafsync
-    - r-lwgeom >=0.2_5
     - r-rlang
-    - r-sf >=0.9_7
-    - r-stars >=0.5_0
+    - r-s2
+    - r-servr
+    - r-sf >=0.9_3
+    - r-stars >=0.4_2
     - r-tmaptools >=3.1
     - r-units >=0.6_1
-    - r-viridislite
-    - r-widgetframe
 
 test:
   commands:
