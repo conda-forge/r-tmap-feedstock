@@ -1,4 +1,4 @@
-{% set version = "3.3-4" %}
+{% set version = "4.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmap/tmap_{{ version }}.tar.gz
-  sha256: c966bcd61c21a9609144f2de89da1601e734ee2c6903f08bf624b217944faaf7
+  sha256: cf97399627540e9f2faf4778d56c4bd644fdedd09ef541ae3de74a002a6d4bd4
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -21,42 +21,47 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-rcolorbrewer
-    - r-abind
     - r-classint >=0.4_3
-    - r-htmlwidgets >=1.5.4
+    - r-cli
+    - r-cols4all >=0.8
+    - r-data.table
+    - r-htmltools
     - r-htmlwidgets
     - r-leafem >=0.1
+    - r-leafgl
+    - r-leaflegend
     - r-leaflet >=2.0.2
     - r-leafsync
-    - r-lwgeom >=0.2_5
     - r-rlang
-    - r-sf >=0.9_7
-    - r-stars >=0.5_0
+    - r-s2
+    - r-servr
+    - r-sf >=0.9_3
+    - r-stars >=0.4_2
     - r-tmaptools >=3.1
     - r-units >=0.6_1
-    - r-viridislite
-    - r-widgetframe
   run:
     - r-base
-    - r-rcolorbrewer
-    - r-abind
     - r-classint >=0.4_3
-    - r-htmlwidgets >=1.5.4
+    - r-cli
+    - r-cols4all >=0.8
+    - r-data.table
+    - r-htmltools
     - r-htmlwidgets
     - r-leafem >=0.1
+    - r-leafgl
+    - r-leaflegend
     - r-leaflet >=2.0.2
     - r-leafsync
-    - r-lwgeom >=0.2_5
     - r-rlang
-    - r-sf >=0.9_7
-    - r-stars >=0.5_0
+    - r-s2
+    - r-servr
+    - r-sf >=0.9_3
+    - r-stars >=0.4_2
     - r-tmaptools >=3.1
     - r-units >=0.6_1
-    - r-viridislite
-    - r-widgetframe
 
 test:
   commands:
