@@ -1,15 +1,15 @@
-{% set version = "4.2" %}
+{% set version = "4.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-tmap
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/tmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tmap/tmap_{{ version }}.tar.gz
-  sha256: 8d72ad4245c5f4a0bbd75d1c9b2e45ab61b0d867ad4aef9b4368440add31dda8
+  sha256: d4ba1d10cf483401fc7f45f4817b1ee58341f24d16b19ae72b709e41daad6c19
 
 build:
   number: 0
